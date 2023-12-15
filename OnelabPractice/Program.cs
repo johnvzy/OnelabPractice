@@ -1,30 +1,19 @@
-﻿using OnelabPractice;
+﻿int targetNum = 6;
+int[] sets = new int[3] { 3, 2, 4 };
+int[] result = TwoSum(sets, targetNum);
+Console.WriteLine($"Output: [{string.Join(",", result)}]");
 
-int n = 8; 
-List<int[]> solutions = EightQueensSolver.SolveQueens(n);
-Console.WriteLine("Distinct solutions to the 8-queens puzzle:");
-PrintSolutions(solutions);
-
-
-static void PrintSolutions(List<int[]> solutions)
+static int[] TwoSum(int[] nums, int target)
 {
-    foreach (var solution in solutions)
+    Dictionary<int, int> seen = new Dictionary<int, int>();
+    for (int i = 0; i < nums.Length; i++)
     {
-        for (int i = 0; i < solution.Length; i++)
+        int complement = target - nums[i];
+        if (seen.ContainsKey(complement))
         {
-            for (int j = 0; j < solution.Length; j++)
-            {
-                if (solution[i] == j)
-                {
-                    Console.Write("Q ");
-                }
-                else
-                {
-                    Console.Write(". ");
-                }
-            }
-            Console.WriteLine();
+            return new int[] { seen[complement], i };
         }
-        Console.WriteLine();
+        seen.Add(nums[i], i);
     }
+    throw new ArgumentException("No two sum solution");
 }

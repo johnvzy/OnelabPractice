@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnelabPractice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32bf380f5beb92ec3d23424f98cbbcc67628ae01")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnelabPractice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnelabPractice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
